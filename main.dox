@@ -1,11 +1,13 @@
 /*! \mainpage Quadratics equations solver documentation
  *
+ * [![Build Status](https://travis-ci.com/cpp-projects-showcase/QuaqraticEquation.svg?branch=master)](https://travis-ci.com/cpp-projects-showcase/QuaqraticEquation)
+ *
  * \section intro_sec Introduction
  *
  * This project povides tools to solve quadratics equations
  *  
  * @author Christophe Gattardi
- * @version 1.0 15/03/2020
+ * @version 1.0 15 March 2020
  *
  * Please visit github if you are looking for source files
  * [QuadraticEquation](https://github.com/cpp-projects-showcase/QuaqraticEquation)
