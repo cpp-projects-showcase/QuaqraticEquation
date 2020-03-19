@@ -2,29 +2,38 @@ language: cpp
 sudo: required
 dist: bionic
 compiler:
-  - gcc
+- gcc
 os:
-  - linux
+- linux
 before_install:
-  - sudo apt-get update
-  - sudo apt-get -y install locales
-  - sudo locale-gen $LANG
-  - sudo apt-get -y install gcc g++ cppcheck cmake
-  - sudo apt-get -y install zlib1g-dev libbz2-dev libgmp-dev
-  - sudo apt-get -y install libboost-all-dev graphviz
-  - sudo apt-get -y install libreadline-dev libncurses5-dev
-  - sudo apt-get -y install doxygen ghostscript texlive-latex-recommended
+- sudo apt-get update
+- sudo apt-get -y install locales
+- sudo locale-gen $LANG
+- sudo apt-get -y install gcc g++ cppcheck cmake
+- sudo apt-get -y install zlib1g-dev libbz2-dev libgmp-dev
+- sudo apt-get -y install libboost-all-dev graphviz
+- sudo apt-get -y install libreadline-dev libncurses5-dev
+- sudo apt-get -y install doxygen ghostscript texlive-latex-recommended
 script:
-  - mkdir build
-  - pushd build
-  - cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE:STRING=Debug ..
-  - make check
-    #  - sudo make install
+- mkdir build
+- pushd build
+- cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE:STRING=Debug ..
+- make check
+- make docs && rm -rf ../docs && mv html ../docs
+- popd
+deploy:
+  provider: pages:git
+  verbose: true
+  target_branch: master
+  local_dir: docs
 branches:
   only:
   - master
   - "/^solver-\\d+\\./"
 env:
- - LANG="en_US.UTF-8"
- - LC_ALL="en_US.UTF-8"
+  matrix:
+  - LANG="en_US.UTF-8"
+  - LC_ALL="en_US.UTF-8"
+  global:
+    secure: xUHwJCQcBGJFALspcKgUiphx+SMNTR3aCA1R1Z3XJUl8zpoGf0JoEqYUNXm4SkctaCN6Wug9aAuZ7d0hIBqlsTLwKo7sgY6UwJeknosUHRRfkNx+Tokje0GQ4Bk4fO53XMMKUrOoT6baHBlwdddhdjzy02qY9gstbIHqS+aEF/tL86Jy1uimayOYwjMvzyDo5aE9HsvcWKtGyx87foX/ZSRtRUCH89XK2pzYwUq7HMZ6PvIB/ruo1E/rEbG7yC5FgpfaZGUpDno5y58oKA6zuRMmFvaSHRep7U4kGa2eAtnp1XPeWZHaLmGwdmJ6BYzhAfafZEXv66qOHWKAGOVkmSM1PG7sQ+H4qhWntRrNnxzS9+aQRwNPDXWnKNx43bRe0MrE8YUF+Wenk7XgYCOkv1OlfkpSNxBHj4fQjXemqN5IzM8RvDJTwrJz5U1rBzVNWAbdSMiIQZY7OF38jKtqsz2PvDgeKiPdHrnLJP4PCA1z/BvKBZYCp4OHRULXKAOViw7pdP+YQUCVRvzn0A/TS7ZYE/ke8h9xl2nSlfUxlIFhHuvxDTEhrqKXF5pPzykTMTNQV0XmogSHtrdiLcykg3mnkKc4YY4aIIIpQ/MwHp7Usn012w6Oto65J7+goDplF5HfniPq884y7B3K39U5kqSDVBSm5gGuqHcbd/lPgvM=
 
