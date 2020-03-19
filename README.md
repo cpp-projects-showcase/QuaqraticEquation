@@ -24,7 +24,7 @@ coefficients need to be real numbers.
 # How do I get set up?
 
 * Clone the repos: `git clone git@github.com:cpp-projects-showcase/QuaqraticEquation.git`
-* Go into the cloned directory: `cd quadraticequation`
+* Go into the cloned directory: `cd QuaqraticEquation`
 * Create your `build` directory and change into it: `mkdir build && cd build`
 * Launch the build: `cmake .. && make`
 * Test everything: `make check`
