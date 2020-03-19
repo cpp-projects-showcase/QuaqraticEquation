@@ -1,0 +1,30 @@
+language: cpp
+sudo: required
+dist: bionic
+compiler:
+  - gcc
+os:
+  - linux
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install locales
+  - sudo locale-gen $LANG
+  - sudo apt-get -y install gcc g++ cppcheck cmake
+  - sudo apt-get -y install zlib1g-dev libbz2-dev libgmp-dev
+  - sudo apt-get -y install libboost-all-dev graphviz
+  - sudo apt-get -y install libreadline-dev libncurses5-dev
+  - sudo apt-get -y install doxygen ghostscript texlive-latex-recommended
+script:
+  - mkdir build
+  - pushd build
+  - cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE:STRING=Debug ..
+  - sudo make install
+  - /usr/bin/solver
+branches:
+  only:
+  - master
+  - "/^solver-\\d+\\./"
+env:
+ - LANG="en_US.UTF-8"
+ - LC_ALL="en_US.UTF-8"
+
