@@ -6,6 +6,7 @@ C++ Course - Second Degree Equations
 # What is this repository for?
 * This project povides tools to solve quadratics equations
 * Version 1.0  15 March 2020
+* Generated documentation on https://cpp-projects-showcase.github.io/QuaqraticEquation
 
 The tools have some limitations:
 * The equation must be quadratic,
