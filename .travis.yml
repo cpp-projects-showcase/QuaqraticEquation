@@ -26,6 +26,7 @@ deploy:
   verbose: true
   target_branch: master
   local_dir: docs
+  edge: true
 branches:
   only:
   - master
