@@ -18,8 +18,8 @@ script:
   - mkdir build
   - pushd build
   - cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE:STRING=Debug ..
+  - make check
   - sudo make install
-  - /usr/bin/solver
 branches:
   only:
   - master
