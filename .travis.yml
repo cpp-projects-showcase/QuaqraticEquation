@@ -1,5 +1,4 @@
 language: cpp
-sudo: required
 dist: bionic
 compiler:
 - gcc
@@ -23,12 +22,11 @@ script:
 - mv html ../docs
 - popd
 deploy:
-  provider: pages:git
+  provider: pages
   verbose: true
   token: $GITHUB_TOKEN
   target_branch: gh-pages
   local_dir: docs
-  cleanup: false
   edge: true
 branches:
   only:
