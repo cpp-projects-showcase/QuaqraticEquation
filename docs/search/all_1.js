@@ -1,6 +1,0 @@
-var searchData=
-[
-  ['computedelta_5',['computeDelta',['../class_eq2deg.html#ab6268c778720ef58641137883a5d7aba',1,'Eq2deg::computeDelta()'],['../class_eq2deg_comp.html#aa931bd8080bb1989a10b3043b2ee6998',1,'Eq2degComp::computeDelta()']]],
-  ['computeroots_6',['computeRoots',['../class_eq2deg.html#aa0f1094c541350594785bc5623a38e48',1,'Eq2deg::computeRoots()'],['../class_eq2deg_comp.html#a7fec7fb0d7d05dd333ae945b97319c2b',1,'Eq2degComp::computeRoots()']]],
-  ['ctestcostdata_2etxt_7',['CTestCostData.txt',['../_c_test_cost_data_8txt.html',1,'']]]
-];
