@@ -8,8 +8,6 @@
  * The derived class should provide a "describe" method returning a string
  * The << operator is also provided here but not as a member of Utilities
  * 
- * with the following restrictions:
- * The coefficients are real
  * 
  * @author Christophe Gattardi
  * @version 1.0 15/03/2020
