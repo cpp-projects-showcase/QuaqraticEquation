@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quadratics_20equations_20solver_20documentation',['Quadratics equations solver documentation',['../index.html',1,'']]]
+  ['readme_84',['README',['../md__r_e_a_d_m_e.html',1,'']]]
 ];
