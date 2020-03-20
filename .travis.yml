@@ -32,7 +32,6 @@ branches:
   only:
   - master
 env:
-  matrix:
   - LANG="en_US.UTF-8"
   - LC_ALL="en_US.UTF-8"
 
