@@ -31,7 +31,6 @@ deploy:
 branches:
   only:
   - master
-  - "/^solver-\\d+\\./"
 env:
   matrix:
   - LANG="en_US.UTF-8"
